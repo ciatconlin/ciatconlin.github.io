@@ -1,0 +1,118 @@
+/* General Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Set font face */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: black;
+    color: white;
+    line-height: 1.6;
+}
+
+/* Container Styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Section */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.header-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.header {
+    font-size: 2em;
+    text-transform: lowercase;
+    color: white;
+}
+
+.subtext {
+    font-size: 1em;
+    color: white;
+    margin-top: -5px;
+}
+
+/* Navigation Styling */
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Video Container Styles */
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Individual Video Section */
+.video-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(50% - 10px); /* Default to two columns */
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+/* Center and Justify Text Below Image */
+#select-credits {
+    text-align: justify; /* Justify the text on both sides */
+    max-width: 700px; /* Restrict width for a centered look */
+    margin: 20px auto; /* Center the entire section horizontally */
+    line-height: 1.8; /* Improve readability */
+}
+
+#select-credits h2 {
+    text-align: center; /* Center-align the heading */
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .video-section {
+        width: 100%; /* Full width for single-column layout */
+    }
+}
+
+/* Oval Image Styling */
+.oval-image {
+    display: block; /* Centers the image horizontally */
+    margin: 20px auto; /* Adds vertical margin and centers horizontally */
+    max-width: 50%; /* Adjust as needed for desired size */
+    height: auto; /* Ensures aspect ratio is maintained */
+    border-radius: 50%; /* Makes the image circular */
+    aspect-ratio: 3 / 4; /* Sets an oval aspect ratio (adjust as needed) */
+    object-fit: cover; /* Ensures the image fits the oval without distortion */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
